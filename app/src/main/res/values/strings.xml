@@ -1,0 +1,30 @@
+<resources>
+    <string name="app_name">O\'Note</string>
+    <string name="create_sample_data">Create Sample Data</string>
+    <string name="delete_all_notes">Delete all notes</string>
+    <string name="ALL_NOTES_DELETE_TEXT">All notes are deleted</string>
+    <string name="ARE_YOU_SURE_TEXT">Are you sure?</string>
+    <string name="image">Image</string>
+    <string name="IMAGE_CONTENT_DESCRIPTOR">Image</string>
+    <string name="title_activity_note_editor">NoteEditorActivity</string>
+    <string name="TYPE_YOUR_NOTE_TEXT">Type your note here</string>
+    <string name="TYPE_TITLE_NOTE_TEXT">Type title of note</string>
+    <string name="NEW_NOTE_ACTIVITY_TITLE">New Note</string>
+    <string name="SAVE_BUTTON_TEXT">Save</string>
+    <string name="NEW_NOTE_INSERT_TEXT">New note is inserted</string>
+    <string name="NEW_NOTE_DISCARD_TEXT">Note is discarded</string>
+    <string name="NOTE_UPDATE_TEXT">Note is updated</string>
+    <string name="NOTE_UNCHANGE_TEXT">Note is not updated</string>
+    <string name="NOTE_DELETE_TEXT">Note is deleted</string>
+    <string name="UPDATE_NOTE_ACTIVITY_TITLE"> </string>
+    <string name="note_grid_view">Grid View</string>
+    <string name="note_linear_view_vertical">Linear View Vertical</string>
+    <string name="attach_picture_note_text">Picture...</string>
+    <string name="attach_video_note_text">Video...</string>
+    <string name="attach_sound_note_text">Sound...</string>
+    <string name="attach_video_doc_text">Document...</string>
+    <string name="MAKE_IMPORTANT_TEXT">Priority</string>
+    <string name="note_set_reminder_text">Set Reminder</string>
+    <string name="note_set_color_text">Set Color</string>
+    <string name="document_image_button">DocumentImageButton</string>
+</resources>

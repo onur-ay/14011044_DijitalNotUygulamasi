@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/main_theme_background"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:showIn="@layout/activity_note_editor"
+        tools:context=".NoteEditorActivity"
+        android:layout_gravity="center_horizontal"
+        tools:ignore="UselessParent">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal">
+            <EditText
+                android:id="@+id/noteTitleEditText"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:padding="10dp"
+                android:layout_alignParentTop="true"
+                android:background="@drawable/card_view_design"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginBottom="5dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp"
+                android:hint="@string/TYPE_TITLE_NOTE_TEXT"
+                android:inputType="textPersonName"
+                android:textSize="25sp"
+                android:textStyle="bold"
+                tools:ignore="Autofill" />
+
+            <EditText
+                android:id="@+id/noteContentEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/noteTitleEditText"
+                android:background="@drawable/card_view_design"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="5dp"
+                android:padding="10dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginBottom="5dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp"
+                android:hint="@string/TYPE_YOUR_NOTE_TEXT"
+                android:inputType="textMultiLine"
+                android:textStyle="italic"
+                tools:ignore="Autofill" />
+
+            <RelativeLayout
+                android:id="@+id/documentCardView"
+                android:layout_width="match_parent"
+                android:visibility="gone"
+                android:padding="5dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/noteContentEditText">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/card_view_design"
+                    android:gravity="center_horizontal">
+
+                    <ImageButton
+                        android:id="@+id/noteDocument"
+                        android:layout_width="70dp"
+                        android:layout_height="70dp"
+                        android:layout_margin="5dp"
+                        android:contentDescription="@string/document_image_button" />
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/imageCardView"
+                android:layout_centerInParent="true"
+                android:visibility="gone"
+                android:padding="5dp"
+                android:layout_below="@id/documentCardView"
+                android:layout_width="wrap_content"
+                android:layout_height="250dp">
+
+                <Button
+                    android:id="@+id/deleteImageAttachmentButton"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:visibility="visible"
+                    android:layout_marginBottom="-30dp"
+                    android:background="@drawable/ic_delete_attachment"/>
+
+                <ImageView
+                    android:id="@+id/noteImageView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/deleteImageAttachmentButton"
+                    android:layout_marginTop="5dp"
+                    android:visibility="visible"
+                    android:padding="10dp"
+                    android:background="@drawable/card_view_design"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:contentDescription="@string/IMAGE_CONTENT_DESCRIPTOR" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/videoCardView"
+                android:layout_centerInParent="true"
+                android:visibility="gone"
+                android:layout_below="@id/imageCardView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <Button
+                    android:id="@+id/deleteVideoAttachmentButton"
+                    android:layout_width="35dp"
+                    android:visibility="visible"
+                    android:layout_height="35dp"
+                    android:layout_marginBottom="-30dp"
+                    android:background="@drawable/ic_delete_attachment" />
+
+                <LinearLayout
+                    android:id="@+id/noteVideoView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:padding="7dp"
+                    android:layout_below="@id/deleteVideoAttachmentButton"
+                    android:background="@drawable/card_view_design"
+                    android:layout_marginTop="7dp"
+                    android:visibility="visible"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:orientation="vertical"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="5dp">
+
+                    <VideoView
+                        android:id="@+id/noteVideo"
+                        android:layout_width="wrap_content"
+                        android:visibility="visible"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_height="@android:dimen/thumbnail_height"/>
+
+                    <LinearLayout
+                        android:id="@+id/noteVideoNavBar"
+                        android:layout_width="match_parent"
+                        android:layout_marginTop="5dp"
+                        android:visibility="visible"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+                        <Button
+                            android:id="@+id/playPauseNoteVideoButton"
+                            android:layout_width="35dp"
+                            android:visibility="visible"
+                            android:layout_height="35dp"
+                            android:layout_marginRight="15dp"
+                            android:layout_marginEnd="15dp"
+                            android:background="@drawable/ic_play"/>
+                        <SeekBar
+                            android:id="@+id/noteVideoSeekBar"
+                            android:visibility="visible"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/image_view_border"/>
+                    </LinearLayout>
+
+                </LinearLayout>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/soundCardView"
+                android:layout_centerInParent="true"
+                android:visibility="gone"
+                android:layout_below="@id/videoCardView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <Button
+                    android:id="@+id/deleteSoundAttachmentButton"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:visibility="visible"
+                    android:layout_marginBottom="-30dp"
+                    android:background="@drawable/ic_delete_attachment"/>
+
+                <LinearLayout
+                    android:id="@+id/noteSoundView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/card_view_design"
+                    android:padding="7dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/noteSoundTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginLeft="20dp"
+                        android:textStyle="italic"
+                        android:textSize="16sp"/>
+
+                    <LinearLayout
+                        android:id="@+id/noteSoundNavBar"
+                        android:layout_width="match_parent"
+                        android:layout_marginTop="10dp"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:visibility="visible">
+
+                        <Button
+                            android:id="@+id/playPauseNoteSoundButton"
+                            android:layout_width="35dp"
+                            android:layout_height="35dp"
+                            android:layout_marginEnd="15dp"
+                            android:visibility="visible"
+                            android:layout_marginRight="15dp"
+                            android:background="@drawable/ic_play"/>
+
+                        <SeekBar
+                            android:id="@+id/noteSoundSeekBar"
+                            android:visibility="visible"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/image_view_border"/>
+                    </LinearLayout>
+
+                </LinearLayout>
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/noteLastModifiedDateText"
+                android:layout_width="wrap_content"
+                android:layout_height="25dp"
+                android:layout_below="@+id/soundCardView"
+                android:layout_marginTop="15dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:textSize="15sp"
+                android:textStyle="italic"
+                android:textColor="@color/main_theme_text_secondary" />
+
+            <TextView
+                android:id="@+id/noteCreatedDateText"
+                android:layout_width="wrap_content"
+                android:layout_below="@+id/noteLastModifiedDateText"
+                android:layout_height="25dp"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="10dp"
+                android:layout_marginEnd="10dp"
+                android:textSize="15sp"
+                android:textStyle="italic"
+                android:textColor="@color/main_theme_text_secondary"/>
+        </RelativeLayout>
+    </ScrollView>
+</LinearLayout>

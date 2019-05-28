@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".NoteEditorActivity">
+
+    <item
+        android:id="@+id/ACTION_ATTACH_PICTURE_NOTE"
+        android:title="@string/attach_picture_note_text"
+        android:enabled="false"
+        android:orderInCategory="1"
+        app:showAsAction="collapseActionView" />
+    <item
+        android:id="@+id/ACTION_ATTACH_SOUND_NOTE"
+        android:title="@string/attach_sound_note_text"
+        android:enabled="false"
+        android:orderInCategory="1"
+        app:showAsAction="collapseActionView" />
+    <item
+        android:id="@+id/ACTION_ATTACH_VIDEO_NOTE"
+        android:title="@string/attach_video_note_text"
+        android:enabled="false"
+        android:orderInCategory="1"
+        app:showAsAction="collapseActionView" />
+    <item
+        android:id="@+id/ACTION_ATTACH_DOC_NOTE"
+        android:title="@string/attach_video_doc_text"
+        android:enabled="false"
+        android:orderInCategory="1"
+        app:showAsAction="collapseActionView" />
+    <item
+        android:id="@+id/ACTION_MAKE_IMPORTANT"
+        android:title="@string/MAKE_IMPORTANT_TEXT"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/ACTION_SET_REMINDER"
+        android:title="@string/note_set_reminder_text"
+        android:icon="@drawable/ic_reminder_light"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/ACTION_SET_COLOR"
+        android:title="@string/note_set_color_text"
+        android:icon="@drawable/ic_color_palette_light"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/ACTION_SAVE_NOTE"
+        android:title="@string/SAVE_BUTTON_TEXT"
+        app:showAsAction="always" />
+</menu>

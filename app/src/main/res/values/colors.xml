@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#2D2D2D</color>
+    <color name="colorPrimaryDark">#000000</color>
+    <color name="colorAccent">#00574B</color>
+    <color name="main_theme_secondary">#00574B</color>
+    <color name="main_theme_text_primary">#000000</color>
+    <color name="main_theme_text_secondary">#707070</color>
+    <color name="main_theme_secondary_background">#2D2D2D</color>
+    <color name="main_theme_background">#000000</color>
+    <color name="main_theme_item_card_background">#FFFFFF</color>
+    <color name="noteCardRed">#A00101</color>
+    <color name="noteCardGreen">#005900</color>
+    <color name="noteCardPink">#EF00BF</color>
+    <color name="noteCardBlue">#000D70</color>
+    <color name="noteCardYellow">#FAFF00</color>
+    <color name="noteCardOrange">#C96400</color>
+    <color name="noteCardPurple">#60004D</color>
+    <color name="noteCardGray">#707070</color>
+    <color name="noteCardAqua">#00C9BF</color>
+</resources>
